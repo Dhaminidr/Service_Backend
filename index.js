@@ -28,13 +28,13 @@ let pool;
 async function startServer() {
     try {
         pool = mysql.createPool({
-            host: MYSQL_HOST,
-            user: MYSQL_USER,
-            password: MYSQL_PASSWORD,
-            database: MYSQL_DATABASE,
-            waitForConnections: true,
-            connectionLimit: 10,
-            queueLimit: 0,
+    host: DB_HOST,      
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_DATABASE, 
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
         });
 
         // Check the connection by executing a simple query
