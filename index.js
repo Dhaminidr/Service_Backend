@@ -12,7 +12,7 @@ const cors = require('cors');
 require('dotenv').config({ path: '.env' });
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Get credentials from .env
 const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE } = process.env;
