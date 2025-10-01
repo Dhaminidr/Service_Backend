@@ -15,7 +15,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Get credentials from .env
-const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE } = process.env;
+const DB_HOST = process.env.HOST || process.env.MYSQL_HOST; 
+const DB_USER = process.env.USER || process.env.MYSQL_USER;
+const DB_PASSWORD = process.env.PASSWORD || process.env.MYSQL_PASSWORD;
+const DB_DATABASE = process.env.DATABASE || process.env.MYSQL_DATABASE;
+
 const JWT_SECRET = process.env.JWT_SECRET;
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 
